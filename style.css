@@ -1,0 +1,967 @@
+/* =================================================
+
+Freelancer name:Abdul Mannnan
+=================================================== */
+
+/*Table of Content
+
+
+    1. Default css
+    2. Preloader css
+    3. Mouse Animation css
+    4. Nav Area css
+    5. Banner Area css
+    6. About Area css
+    7. Services Area css
+    8. Number Area css
+    9. Portfolio Area css
+    10. Testimonial Area css
+    11. Contact Area css
+    12. Brand Area css
+    13. Footer Area css
+
+
+*/
+
+/*--- 1. Default css starts ---*/
+@font-face {
+  font-family: sobuz;
+  src: url(fontawesome-webfont.woff2);
+}
+
+html,body{
+    height: 100%;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333333;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color: #333333;
+    font-weight: 600;
+}
+
+p {
+    letter-spacing: 0;
+    line-height:1.8;
+}
+
+a{
+    text-decoration: none;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+a:focus{
+    outline:none;
+    text-decoration: none;
+}
+
+ul,li{
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-padding{
+    padding: 60px 0;
+}
+
+.section-header{
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.section-header h2 {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.line-one {
+    height: 1px;
+    width: 100px;
+    background: #E91E63;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/*---Default css ends---*/
+
+
+/*--- 3. Mouse animation starts---*/
+
+@-webkit-keyframes scroll-ani {
+    0% {
+        opacity: 1;
+        top: 29%;
+    }
+    15% {
+        opacity: 1;
+        top: 50%;
+    }
+    50% {
+        opacity: 0;
+        top: 50%;
+    }
+    100% {
+        opacity: 0;
+        top: 29%;
+    }
+}
+
+@keyframes scroll-ani {
+    0% {
+        opacity: 1;
+        top: 29%;
+    }
+    15% {
+        opacity: 1;
+        top: 50%;
+    }
+    50% {
+        opacity: 0;
+        top: 50%;
+    }
+    100% {
+        opacity: 0;
+        top: 29%;
+    }
+}
+
+.mouse-scroll {
+    position: absolute;
+    left:48%;
+    display: inline-block;
+    line-height: 18px;
+    font-size: 13px;
+    font-weight: normal;
+    color: #ffffff;
+    letter-spacing: 2px;
+    margin-top: 10%;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.mouse-scroll .mouse {
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 60px;
+    margin: 0 auto 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 3px solid #ffffff;
+    border-radius: 23px;
+}
+
+.mouse-scroll .mouse .mouse-movement {
+    position: absolute;
+    display: block;
+    top: 29%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+    background: #ffffff;
+    border-radius: 50%;
+    -webkit-animation: scroll-ani 2s linear infinite;
+    animation: scroll-ani 2s linear infinite;
+}
+
+/*---mouse animation ends---*/
+
+/*-------------- 2. Preloader css starts ---------------*/
+
+.loader_bg {
+    position: fixed;
+    z-index: 9999999;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+.loader {
+    border: 0 solid transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
+}
+
+.loader:before, .loader:after {
+    content: '';
+    border: 1em solid #E91E63;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+}
+
+.loader:before {
+    animation-delay: .5s;
+}
+
+@keyframes loader {
+    0% {
+        transform: scale(0);
+        opacity: 0; }
+    50% {
+        opacity: 1; }
+    100% {
+        transform: scale(1);
+        opacity: 0; }
+}
+
+
+/*-------------- Preloader css ends ---------------*/
+
+/*---------- 4. Nav area css starts -------------*/
+
+.nav-area{
+    height: 65px;
+}
+
+.nav-area.sticky_navigation{
+    background: #000000;
+    height: 68px;
+}
+
+.navbar-nav {
+    margin-top: 15px;
+}
+
+.sticky_navigation{
+    -webkit-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out ;
+    transition: all 0.4s ease-out ;
+    -webkit-box-shadow: 0px 3px 4.6px 0.3px rgba(0,0,0,0.25);
+    box-shadow: 0px 3px 4.6px 0.3px rgba(0,0,0,0.25);
+}
+
+.sticky_navigation .main-menu{
+    margin-top: 0;
+}
+
+.sticky_navigation .navbar-brand, .sticky_navigation .navbar-brand span {
+    color: #000000;
+}
+
+.sticky_navigation .navbar-brand:hover, .sticky_navigation .navbar-brand:focus, .sticky_navigation .navbar-brand span {
+    color: #E91E63;
+}
+
+.sticky_navigation .nav li a {
+    color: #fffdfd;
+}
+
+.sticky_navigation .nav li.active a{
+    color: #E91E63;
+}
+
+.sticky_navigation .nav li.active::before {
+    border-top: 1px solid #E91E63;
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+.sticky_navigation .nav li.active::after {
+    border-bottom: 1px solid #E91E63;
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.sticky_navigation .navbar-brand:hover{
+    color: #ffffff;
+}
+
+.main-menu{
+    -webkit-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+    margin-top: 10px;
+}
+
+.navbar{
+    border:0;
+    margin-bottom: 0;
+}
+
+.navbar-brand{
+    padding: 25px 0;
+    text-transform: uppercase;
+    font-size: 25px;
+    display: block;
+    color: #ffffff;
+    font-weight: 800;
+}
+span.logo-2 {
+    margin-left: -5px;
+}
+.logo {
+    padding: 5px;
+    font-size: 32px;
+    letter-spacing: 3px;
+    text-transform: lowercase!important;
+}
+
+.navbar-brand:focus, .navbar-brand:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.navbar-right li{
+    display: inline-block;
+    float: none;
+}
+
+.navbar-right li a{
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.navbar-right li.active a{
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav > li > a:hover,
+.nav > li > a:active,
+.nav > li > a:focus{
+    background: none;
+}
+
+.navbar-toggle .icon-bar{
+    background: #033D75;
+}
+
+/*---------- Nav area css ends -------------*/
+
+/*----------- 5. Banner area css starts--------------*/
+
+
+.banner-area{
+
+
+    background-size:cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100%;
+}
+
+.banner-area::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    content: '';
+}
+
+canvas{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.banner-table{
+    display: table;
+    margin: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.banner-table-cell{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.welcome-text .intro h2 {
+    color: #fff;
+    font-size: 85px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.intro h1 {
+    color: #ffffff;
+    font-size: 70px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.ah-headline.clip .ah-words-wrapper::after {
+    background-color: #fff;
+}
+
+.banner-btn {
+    background: #E91E63;
+    text-decoration: none;
+    padding: 10px 30px;
+    display: inline-block;
+    margin-top: 25px;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+}
+.banner-btn:hover, .banner-btn:focus {
+    text-decoration: none;
+    color: #ffffff;
+}
+section.intro.animate-scale {
+    margin-top: 50px;
+}
+
+.welcome-text h3 {
+    color: #fff;
+    /* text-transform: capitalize; */
+    font-size: 35px;
+    font-weight: 500!important;
+    margin-left: 70px;
+    margin-top: 20px;
+}
+h3.ah-headline.rotate-1 b {
+    font-weight: 600;
+}
+/*---------Banner area css ends--------------*/
+
+
+/*--------12. Brand area starts-----------*/
+
+.brand-logo-img{
+    border:1px solid #ddd;
+    transition: all 300ms ease-in-out;
+    padding: 10px;
+}
+
+.brand-logo-img:hover{
+    border-color: transparent;
+    box-shadow: 0 20px 40px rgba(0,0,0,.2);
+}
+
+/*--------Brand area ends-----------*/
+
+/*--------------13. Footer area starts -------------*/
+header.nav-area.navbar-fixed-top.new {
+    background: black;
+}
+
+.footer-area {
+    background: #232323;
+    color: #ffffff;
+    padding: 30px 0;
+}
+
+header.nav-area.new {
+    background: black;
+    padding-bottom: 91px;
+}
+/*--------------- Footer area ends -------------*/
+/*==========================CSS FOR ABOUT US PAGE===========*/
+
+
+/*---------------6. About area starts ----------------*/
+.navok {
+    padding-top: 150px;
+}
+.about-left {
+    -webkit-box-shadow: 10px 10px 1px #c6c6c6,20px 20px 1px #dddddd;
+    -moz-box-shadow: 10px 10px 1px #c6c6c6,20px 20px 1px #dddddd;
+    box-shadow: 10px 10px 1px #c6c6c6,20px 20px 1px #dddddd;
+}
+.about-right {
+    padding: 2% 5%;
+}
+.about-right h1 {
+    border-left: 3px solid blue;
+    padding-left: 15px;
+    font-size: 30px;
+    line-height:40px;
+}
+.text-primary {
+    color: blue;
+}
+.socials {
+    /* margin-top: 4%; */
+}
+.socials li {
+    display: inline-block;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    /* margin-right: 25px; */
+}
+#about .socials a {
+    display: inline-block;
+    height: 40px;
+    /* width: 40px; */
+    font-size: 30px;
+    color: #222222;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    /* border: 2px solid #222222; */
+    /* background: #c83333fc; */
+    line-height: 2.5;
+    text-align: center;
+}
+
+#about .socials .fa-twitter:hover{
+ /* color: #00aced; */
+ /* padding-bottom: 20px; */
+}
+#about .socials .fa-facebook:hover{
+ color: #3b5998;
+ padding-bottom: 20px;
+
+}
+#about .socials .fa-instagram:hover{
+  -webkit-text-fill-color:transparent;
+  	background: radial-gradient(circle farthest-corner at 32% 106%, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), linear-gradient(135deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+  	-webkit-background-clip:text;
+ padding-bottom: 20px;
+
+}
+#about .socials .fa-snapchat:hover{
+ color: #FFFC00;
+ padding-bottom: 20px;
+
+}
+#about .socials .fa-linkedin:hover{
+ color: #007bb6;
+ padding-bottom: 20px;
+
+}
+#about .socials .fa-github:hover{
+ color: red;
+ padding-bottom: 20px;
+
+}
+
+#about .socials a i{
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    transition: all .5s;
+}
+.interest{
+  background: #c0c0c02b;
+}
+h2.interest-title {
+    text-transform: capitalize;
+    text-align: center;
+    position: relative;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+h2.interest-title::after
+{content: "";
+background: black;
+width: 21%;
+height: 3px;
+position: absolute;
+top: 44px;
+left: 40%;
+}
+.interest-area{
+  margin-top: 50px;
+  background: #ffffff;
+  overflow: auto;
+  padding:55px;
+}
+.interest-subject {
+    background: #c0c0c04a;
+    padding: 30px;
+    max-width: 83%;
+    text-align: center;
+}
+
+.interest-subject .fa {
+    font-size: 25px;
+    color: black;
+}
+
+span.title-in {
+    font-size: 18px;
+    font-weight: 700;
+}
+.margin-top{
+  margin-top: 30px;
+}
+.interest-subject img {
+    max-width: 26px;
+    margin-top: -8px;
+    min-width: 26px;
+}
+
+/*------ 11. Contact area starts-------*/
+
+
+#contact-form {
+    box-shadow: 0 20px 40px rgba(0,0,0,.2);
+    padding: 5%;
+}
+
+.single-contact i {
+    font-size: 30px;
+    color: #E91E63;
+}
+
+.single-contact .socials i {
+    font-size: 14px;
+    color: #000000;
+    transition: all .6s;
+}
+
+.socials i:hover {
+    cursor: pointer;
+}
+
+.single-contact {
+    margin-bottom: 50px;
+}
+
+.contact-area .form-control{
+    border: none;
+    border-bottom: 2px solid #a2a2a2;
+    box-shadow: none;
+    padding: 6px 0;
+    border-radius: 0;
+    margin-bottom: 30px;
+}
+
+.contact-area textarea.form-control{
+    border:2px solid #a2a2a2;
+    padding: 6px;
+    height: 250px;
+    margin-bottom: 30px;
+}
+
+.single-contact h2 {
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.btn.btn-send {
+    background: #E91E63;
+    color: #ffffff;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.contact-right h2 {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.socials {
+    /* padding-top: 5%; */
+}
+
+.socials i {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.single-contact {
+    box-shadow: 0 20px 40px rgba(0,0,0,.2);
+    padding: 5%;
+}
+
+ .socials .fa-twitter:hover{
+ /* color: #00aced; */
+ /* padding-right: 13px; */
+}
+ .socials .fa-facebook:hover{
+ color: #3b5998;
+  padding-left: 13px;
+
+}
+ .socials .fa-instagram:hover{
+  -webkit-text-fill-color:transparent;
+  	background: radial-gradient(circle farthest-corner at 32% 106%, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), linear-gradient(135deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+  	-webkit-background-clip:text;
+  padding-left: 13px;
+
+}
+ .socials .fa-snapchat:hover{
+ color: #FFFC00;
+ padding-left: 13px;
+
+}
+ .socials .fa-linkedin:hover{
+ color: #007bb6;
+ padding-left: 13px;
+
+}
+ .socials .fa-github:hover{
+ color: red;
+ padding-left: 13px;
+
+}
+/*-------- Contact area ends----------- */
+/*---------tennis area start------------*/
+h2.tennis-title {
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+    position: relative;
+}
+h2.tennis-title::after {
+    content: "";
+    background: black;
+    width: 20%;
+    height: 3px;
+    position: absolute;
+    top: 44px;
+    left: 40%;
+}
+.tennis-video {
+    background: #716e6e63;
+    box-shadow: 5px 5px 10px;
+    padding: 10px;
+}
+.teni{
+  margin-top: 30px;
+}
+
+.tennis-video iframe {
+    max-width: 100%;
+    min-width: 100%;
+    height: 450px;
+}
+.contain{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.tennis-text {
+    padding-top: 39px;
+    background: #c0c0c04d;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px;
+}
+
+.tennis-text p {
+    font-size: 18px;
+    line-height: 31px;
+    font-weight: 600;
+}
+/*=============saxophone=========================*/
+.saxophone-video {
+    background: #c0c0c061;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px;
+    max-width: 90%;
+    margin:auto;
+}
+
+.saxophone-video iframe {
+    min-width: 100%;
+    max-width: 100%;
+    height: 450px;
+}
+.saxophone-padding{
+  padding-top: 0px;
+  padding-bottom: 40px;
+}
+p.saxophone-intro {
+    font-size: 18px;
+    margin-top: 24px;
+}
+
+.saxophone-list {
+    padding: 20px;
+    background: #c0c0c04d;
+    padding-left: 59px;
+}
+.sax-lsit-box li {
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.sax-lsit-box {
+    padding: 21px;
+}
+img.logo-image {width: 190px;margin-top: -30px;}
+/*====================================acadamic page=====================*/
+.aca-hero {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+    background-size: cover;
+    height: 400px;
+}
+.navok2{
+padding-top: 86px;
+}
+h2.aca-title {
+    color: black;
+    /* background: #0000ff12; */
+    width: 37%;
+    margin: auto;
+    padding-top: 90px;
+    position: relative;
+    font-size: 42px;
+    margin-bottom: 45px;
+}
+.aca-description {
+    padding-top: 23px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+p.aca-detais {
+    padding: 10px;
+    font-size: 21px;
+    line-height: 30px;
+    font-family: arial;
+    padding-bottom: 50px;
+    border-bottom: 5px solid #0000ff1f;
+}
+.numaric-website {
+    padding: 10px 131px;
+}
+.numaric-website p {
+    font-size: 18px;
+    margin-top: 25px;
+}
+.seound-colum {
+    margin-top: 30px;
+}
+
+.seound-colum li {
+    font-size: 18px;
+    margin-top: 25px;
+}
+.lst {
+    margin-top: 35px;
+}
+
+.last-padding {
+    padding-left: 29px;
+    margin-top: 26px;
+}
+
+h5.last-title {
+    font-size: 17px;
+    font-weight: 300;
+    position: relative;
+}
+
+h5.last-title:after {
+    position: absolute;
+    top: 22px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    color: red;
+    background: #232020;
+    content: "";
+}
+h6.last-title2 {
+    font-size: 16px;
+    font-weight: 300;
+    padding: 20px 0px;
+    padding-left: 20px;
+}
+li.last-padding1 {
+    font-size: 16px;
+    padding-left: 32px;
+    margin-bottom: 11px;
+}
+img.aca-img {
+    width: 428px;
+    margin: auto;
+    margin-left: 30%;
+    /* height: 508px; */
+}
+h2.aca-title:after {
+    content: "";
+    background: black;
+    width: 96%;
+    height: 3px;
+    position: absolute;
+    top: 144px;
+    left: -1%;
+}
+img.logo-image2 {
+    display: none;
+}
+
+header.nav-area.navbar-fixed-top.sticky_navigation img.logo-image {
+    display: none;
+}
+
+.nav-area.sticky_navigation img.logo-image2 {
+    display: block;
+    width: 203px;
+    margin-top: -33px;
+}
+span.big {
+    font-size: 17px;
+    font-weight: bold;
+    color: blue;
+}
+.about-left.wow.fadeInDown.animated {
+    width: 90%;
+}
+i.fa.fa-twitter {
+  background: #007FED;
+  color: #fff;
+  font-size: 22px;
+   padding: 5px;
+  }
+
+
+
+  
